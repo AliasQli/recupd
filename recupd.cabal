@@ -1,0 +1,26 @@
+cabal-version:      2.4
+name:               recupd
+version:            0.1.0
+synopsis:           Better recupd with QQ
+description:        Quasiquotation for better record update.
+homepage:           https://github.com/AliasQli/recupd
+bug-reports:        https://github.com/AliasQli/recupd/issues
+source-repository head
+  type: git
+  location: git://github.com/AliasQli/recupd.git
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Alias Qli
+maintainer:         2576814881@qq.com
+copyright:          (c) Alias Qli 2022
+category:           Records, QuasiQuotes
+extra-source-files: CHANGELOG.md
+
+library
+    build-depends:    base >= 4.7 && < 5
+                    , template-haskell
+                    , haskell-src-meta
+    hs-source-dirs:   src
+    exposed-modules:  RecUpd.QQ
+    other-modules:    Internal.Parser
+    default-language: Haskell2010
